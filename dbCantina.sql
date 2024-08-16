@@ -108,8 +108,37 @@ insert into tbUsuarios(nome,senha,codFunc)
 insert into tbUsuarios(nome,senha,codFunc)
 	values('regina.miranda','654321',2);
 
+insert into tbProdutos(descricao,quantidade,valor,validade,
+	dataEntrada,horaEntrada,codForn)
+	values('Mesa martinele',15,850.00,'2030/06/25','2024/08/16','19:50:55',1);
+
+insert into tbProdutos(descricao,quantidade,valor,validade,
+	dataEntrada,horaEntrada,codForn)
+	values('Pamonhas maravilha',150,2.50,'2024/08/20','2024/08/16','19:53:55',2);
+
+insert into tbProdutos(descricao,quantidade,valor,validade,
+	dataEntrada,horaEntrada,codForn)
+	values('Bolo de ameixa',20,33.00,'2024/08/19','2024/08/16','19:55:00',2);	
+
+insert into tbProdutos(descricao,quantidade,valor,validade,
+	dataEntrada,horaEntrada,codForn)
+	values('Cadeira',50,1550.00,'2030/08/16','2024/08/16','20:00:00',1);
+
+
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,
+	codCli,codProd)
+	values('2024/08/16','19:57:52',2,2,3,4);
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,
+	codCli,codProd)
+	values('2024/08/16','20:01:52',10,1,2,3);
+insert into tbVendas(dataVenda,horaVenda,quantidade,codUsu,
+	codCli,codProd)
+	values('2024/08/16','20:03:52',13,2,1,1);	
+
 -- visualizando os registros das tabelas
 select * from tbFuncionarios;
 select * from tbFornecedores;
 select * from tbClientes;
 select * from tbUsuarios;
+select * from tbProdutos;
+select * from tbVendas;
