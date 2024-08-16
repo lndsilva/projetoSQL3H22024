@@ -23,7 +23,7 @@ create table tbFornecedores(
 codForn int not null auto_increment,
 nome varchar(100) not null,
 email varchar(100) not null,
-cnpj char(17) not null unique,
+cnpj char(18) not null unique,
 primary key(codForn));
 
 create table tbClientes(
@@ -81,6 +81,35 @@ insert into tbFuncionarios(nome,email,cpf,sexo,salario,
 	nascimento,telCelular)values('Amarildo Santiago',
 	'amarildo@hotmail.com','111.125.248-88','M',
 	1500.50,'1999/06/25','95842-8541');
+insert into tbFuncionarios(nome,email,cpf,sexo,salario,
+	nascimento,telCelular)values('Regina Miranda',
+	'regina.miranda@hotmail.com','222.521.528-89','F',
+	2250.50,'2001/08/15','98536-4569');
+
+insert into tbFornecedores(nome,email,cnpj)
+	values('Armarinhos Fernandez',
+		'fernandez@gmail.com','25.258.152.0001/25');
+insert into tbFornecedores(nome,email,cnpj)
+	values('Casa das Pamonhas',
+		'casaPamonhas@hotmail.com.com','52.852.251.0001/52');
+
+insert into tbClientes(nome,email,telCelular)
+	values('Julia Maria Candida','julia.mcandida@yahoo.com',
+		'98526-5241');
+insert into tbClientes(nome,email,telCelular)
+	values('Marta Rodrigues','marta.rodrigues@hotmail.com',
+		'96258-1452');
+insert into tbClientes(nome,email,telCelular)
+	values('Leandro Gabriel','leandro.gabriel@gmail.com',
+		'97423-5417');
+
+insert into tbUsuarios(nome,senha,codFunc)
+	values('amarildo.santiago','123456',1);
+insert into tbUsuarios(nome,senha,codFunc)
+	values('regina.miranda','654321',2);
 
 -- visualizando os registros das tabelas
 select * from tbFuncionarios;
+select * from tbFornecedores;
+select * from tbClientes;
+select * from tbUsuarios;
