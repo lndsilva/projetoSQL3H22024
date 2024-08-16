@@ -75,5 +75,12 @@ desc tbUsuarios;
 desc tbProdutos;
 desc tbVendas;
 
+-- inserindo registros nas tabelas
 
+insert into tbFuncionarios(nome,email,cpf,sexo,salario,
+	nascimento,telCelular)values('Amarildo Santiago',
+	'amarildo@hotmail.com','111.125.248-88','M',
+	1500.50,'1999/06/25','95842-8541');
 
+-- visualizando os registros das tabelas
+select * from tbFuncionarios;
