@@ -142,3 +142,14 @@ select * from tbClientes;
 select * from tbUsuarios;
 select * from tbProdutos;
 select * from tbVendas;
+
+-- alterando os registros das tabelas
+
+update tbProdutos set descricao = 'Coxinha', valor = 7.00
+	where codProd = 1;
+update tbProdutos set descricao = 'Pastel de queijo', valor = 10.00
+	where codProd = 4;
+
+-- visualizando depois das alterações
+
+select * from tbProdutos;
