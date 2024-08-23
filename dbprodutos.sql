@@ -51,5 +51,40 @@ select * from produtos where nome = 'Monitor' and tipo = 'Informatica';
 
 select * from produtos where nome = 'Monitor' or tipo = 'Informatica';
 
-select * from produtos where tipo in('Informatica','Telefone');
+select * from produtos where tipo not in('Informatica','Telefone');
 
+select * from produtos where valor not between 250 and 600;
+
+-- pesquisa por código
+
+select * from produtos where codigo = 5;
+
+-- pesquisa por nome
+
+-- %nome
+
+-- nome%
+
+-- %nome%
+
+
+select * from produtos where nome like '%o';
+
+select * from produtos where nome like 'i%';
+
+select * from produtos where nome like '%a%';
+
+select * from produtos where nome like '%a%' and tipo = 'Informatica';
+
+select * from produtos where nome like '%a%' or tipo = 'Informatica';
+
+select * from produtos where nome not like '%a%' or tipo = 'Informatica';
+
+select valor = valor * 1.20 as 'Valor' from produtos where nome like 'F%';
+
+select valor from produtos where nome like 'f%';
+
+update produtos set valor = valor * 1.12 
+	where nome like 'f%';
+
+select nome, valor from produtos where nome like 'f%';
