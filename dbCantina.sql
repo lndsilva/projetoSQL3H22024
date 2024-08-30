@@ -153,3 +153,21 @@ update tbProdutos set descricao = 'Pastel de queijo', valor = 10.00
 -- visualizando depois das alterações
 
 select * from tbProdutos;
+
+-- integridade e consistência
+
+select prod.descricao as "Nome do produto", 
+forn.nome as "Nome do fornecedor"
+from tbProdutos as prod
+inner join tbFornecedores as forn
+on prod.codForn = forn.codForn;
+
+
+select usu.nome,prod.descricao,cli.nome 
+from tbVendas as vend
+inner join tbUsuarios as usu
+on vend.codUsu = usu.codUsu
+inner join tbProdutos as prod
+on vend.codProd = prod.codProd
+inner join tbClientes as cli
+on vend.codCli = cli.codCli;

@@ -95,3 +95,17 @@ update produtos set quantidade = quantidade + 50
 
 select * from produtos 
 	where valor > 400 and valor < 600;
+
+-- clausula order by
+
+select * from produtos order by valor desc;
+
+select * from produtos order by valor asc;
+
+-- clausula limit
+
+select * from produtos limit 5;
+
+select * from produtos order by valor limit 5;
+
+
