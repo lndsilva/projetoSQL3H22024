@@ -1,5 +1,5 @@
 -- apagando banco de dados
-drop database dbcantina;
+-- drop database dbcantina;
 
 -- criando banco de dados
 create database dbcantina;
@@ -171,3 +171,6 @@ inner join tbProdutos as prod
 on vend.codProd = prod.codProd
 inner join tbClientes as cli
 on vend.codCli = cli.codCli;
+
+
+select * from tbusuarios where nome = 'amarildo.santiago' and senha = '123456';
