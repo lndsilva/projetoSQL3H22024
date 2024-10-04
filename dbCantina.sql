@@ -13,10 +13,13 @@ codFunc int not null auto_increment,
 nome varchar(100) not null,
 email varchar(100) unique,
 cpf char(14) not null unique,
-sexo char(1) default 'F' check(sexo in('F','M')),
-salario decimal(9,2) default 0 check(salario >=0),
-nascimento date,
 telCelular char(10),
+cep char(9),
+endereco varchar(100),
+numero char(10),
+bairro varchar(100),
+cidade varchar(100),
+estado char(2),
 primary key(codFunc));
 
 create table tbFornecedores(
