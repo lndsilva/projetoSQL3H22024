@@ -81,6 +81,11 @@ desc tbVendas;
 -- inserindo registros nas tabelas
 
 insert into tbFuncionarios(nome,email,cpf,sexo,salario,
+	nascimento,telCelular)values('Etecia',
+	'etecia@etecia.com','222.225.248-88','M',
+	1500.50,'1999/06/25','95842-8541');
+
+insert into tbFuncionarios(nome,email,cpf,sexo,salario,
 	nascimento,telCelular)values('Amarildo Santiago',
 	'amarildo@hotmail.com','111.125.248-88','M',
 	1500.50,'1999/06/25','95842-8541');
@@ -177,3 +182,5 @@ on vend.codCli = cli.codCli;
 
 
 select * from tbusuarios where nome = 'amarildo.santiago' and senha = '123456';
+
+select * from tbFuncionarios;
